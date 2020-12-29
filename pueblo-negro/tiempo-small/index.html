@@ -1,0 +1,117 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Hechos por género </title>
+        <script
+          src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous">
+        </script>
+        <!-- <script src="https://d3js.org/d3.v6.js"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script> -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    
+    <body>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12">
+            <div class="carrousel">
+
+              <!-- 1 -->
+              <div class="carousel-inner">
+                <img class="grafica" src="./img/1.png" alt="">
+                <p class="col-xs-12" id="des">
+                  Número de víctimas del pueblo étnico negro (afrocolombiano + palenquero + raizal de San Andrés) por hecho victimizante y año, desde 1960 hasta 2019.
+                </p>
+              </div>    
+              
+              <!-- 2 -->
+              <div class="carousel-inner">
+                <img class="grafica" src="./img/2.png" alt="">
+                <p class="col-xs-12" id="des">
+                  La mayoría de hechos victimizantes se presentaron entre 1998 y 2003.
+                </p>
+              </div>     
+
+              <!-- 3 -->
+              <div class="carousel-inner">
+                <img class="grafica" src="./img/3.png" alt="">
+                <p class="col-xs-12" id="des">
+                  Existe un pico de 5 años en cuanto a víctimas directas e indirectas que inicia en el 2002, año de inicio del gobierno de la seguridad democrática y año posterior a la desmovilización de las AUC, respectivamente.
+                </p>
+              </div>    
+              
+              <!-- 4 -->
+              <div class="carousel-inner">
+                <img class="grafica" src="./img/4.png" alt="">
+                <p class="col-xs-12" id="des">
+                  El abandono, el despojo y los delitos contra la integridad sexual se concentran principalmente entre los años 1999 y 2002.
+                </p>
+              </div>
+
+              <!-- 5 -->
+              <div class="carousel-inner">
+                <img class="grafica" src="./img/5.png" alt="">
+                <p class="col-xs-12" id="des">
+                  En el 2016 emerge una oleada de amenazas, periodo que coincide con la desmovilización de las FARC.
+                </p>
+              </div>
+
+              <!-- 6 -->
+              <div class="carousel-inner">
+                <img class="grafica" src="./img/6.png" alt="">
+                <p class="col-xs-12" id="des">
+                  El año de mayor desplazamiento forzado de los pueblos afrodescendientes en Colombia, de acuerdo al Registro Único de Víctimas (RUV) se da en el 2007, un año después de la desmovilización de las AUC.
+                </p>
+              </div>
+
+              
+
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <button id='prev'> 👈🏿  Anterior </button>
+          </div>
+          <div class="col-xs-6">
+            <button id='next'> Siguiente 👉🏿 </button>
+          </div>
+          
+        </div>
+      </div>
+        
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('.carrousel').slick({
+              arrows:false,
+              adaptiveHeight: true
+            });
+          });
+
+          $('#prev').click(function(){
+            $('.carrousel').slick('slickPrev');
+          })
+
+          $('#next').click(function(){
+            $('.carrousel').slick('slickNext');
+          })
+        </script>
+    </body>
+</html>

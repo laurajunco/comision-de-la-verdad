@@ -1,0 +1,120 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Hechos por etnia  </title>
+        <script
+          src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous">
+        </script>
+        <!-- <script src="https://d3js.org/d3.v6.js"></script>
+        <script src="https://d3js.org/d3.v6.min.js"></script> -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+        <!-- Slick -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    
+    <body>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xs-12">
+            <div class="carrousel">
+              <!-- 1 todos -->
+              <div class="carousel-inner">
+                <p class="title">
+                  Número de víctimas por pueblo étnico (afrocolombia, palenquero y raizal) de acuerdo al hecho victimizante sufrido 
+               </p>
+               <img class="grafica" src="./img/todos.png" alt="">
+               <p class="col-xs-12" id="des">
+                 Esta gráfica representa el número de personas pertenecientes a los pueblos étnicos afrocolombiano, palenquero y raizal que han sufrido hechos victimizantes, cifras distribuidas según el tipo de hecho.
+               </p>
+              </div>
+
+              <!-- 2 afro -->
+              <div class="carousel-inner">
+                <p class="title">
+                  Número de víctimas del pueblo étnico afrocolombiano de acuerdo al hecho victimizante sufrido 
+               </p>
+               <img class="grafica" src="./img/afro.png" alt="">
+               <p class="col-xs-12" id="des">
+                El pueblo afrodescendiente es el más victimizado entre los 3 pueblos descritos, especialmente porque son los de mayor cantidad de personas.
+               </p>
+              </div>
+
+              <!-- 3 palenque -->
+              <div class="carousel-inner">
+                <p class="title">
+                  Número de víctimas del pueblo étnico palenquero de acuerdo al hecho victimizante sufrido 
+               </p>
+               <img class="grafica" src="./img/palenque.png" alt="">
+               <p class="col-xs-12" id="des">
+                ¿Notaste que hay un aumento en el hecho victimizante “secuestro” para las comunidades palenqueras con respecto a las afrocolombianas y raizales?
+               </p>
+              </div>
+
+              <!-- 4 Raizal -->
+              <div class="carousel-inner">
+                <p class="title">
+                  Número de víctimas del pueblo étnico raizal de San Andrés de acuerdo al hecho victimizante sufrido 
+               </p>
+               <img class="grafica" src="./img/raizal.png" alt="">
+               <p class="col-xs-12" id="des">
+                Cuando hablamos del conflicto armado interno pocas veces se menciona lo que sucede en nuestras islas. ¿Relacionas esta realidad con otros aspectos relacionados a San Andrés y Providencia?
+               </p>
+              </div>
+
+              <!-- 5 sin Desplazamiento -->
+              <div class="carousel-inner">
+                <p class="title">
+                  Número de víctimas del pueblo étnico raizal de San Andrés de acuerdo al hecho victimizante sufrido 
+               </p>
+               <img class="grafica" src="./img/sindes.png" alt="">
+               <p class="col-xs-12" id="des">
+                Número de víctimas por pueblo étnico (afrocolombia, palenquero y raizal) de acuerdo al hecho victimizante sufrido (excluyendo desplazamiento forzado)
+               </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <button id='prev'> 👈🏿  Anterior </button>
+          </div>
+          <div class="col-xs-6">
+            <button id='next'> Siguiente 👉🏿 </button>
+          </div>
+          
+        </div>
+      </div>
+        
+
+        <script type="text/javascript">
+          $(document).ready(function(){
+            $('.carrousel').slick({
+              arrows:false,
+              adaptiveHeight: true
+            });
+          });
+
+          $('#prev').click(function(){
+            $('.carrousel').slick('slickPrev');
+          })
+
+          $('#next').click(function(){
+            $('.carrousel').slick('slickNext');
+          })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Hechos por etnia  </title>
+        <script
+          src="https://code.jquery.com/jquery-3.5.1.js"
+          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+          crossorigin="anonymous">
+        </script>
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <!--<script src="https://d3js.org/d3.v6.min.js"></script>-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    
+    <body>
+      <div class="container">
+        <div class="row">
+          <p class="title"> Número de víctimas por pueblo étnico (afrocolombia, palenquero y raizal) de acuerdo al hecho victimizante sufrido </p>
+          <div class="col-sm-12 col-md-9" id="container-etnia">
+            <!-- visualizacion -->
+          </div>
+          <div class="col-md-3 col-sm-12 botones-container">
+            <button class="col-xs-12" id="afro"> Afrocolombiano </button>
+            <button class="col-xs-12" id="palenque"> Palenquero </button>
+            <button class="col-xs-12" id="raizal"> Raizal de San Andrés </button>
+            <button class="col-xs-12" id="todos"> Todos </button>
+            <button class="col-xs-12 inactive" id="desplazamiento"> Ocultar desplazamiento forzado </button>
+            <p class="col-xs-12" id="des">
+              Esta gráfica representa el número de personas pertenecientes a los pueblos étnicos afrocolombiano, palenquero y raizal que han sufrido hechos victimizantes, cifras distribuidas según el tipo de hecho.
+            </p>
+          </div>
+        </div>
+      </div>
+        
+        <script src="script.js"></script>
+    </body>
+</html>

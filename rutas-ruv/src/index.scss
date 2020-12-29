@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+$cafe-fondo: #F0ECE4;
+$morado: #3623D6;
+$negro: #1D1C1A;
+$amarillo: #FFF4CB;
+$verde: #C4F8CD;
+//$rosa: #FD9A9A;
+$rosa: #FF7171;
+
+body {
+  margin: auto;
+  max-width: 1600px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $cafe-fondo;
+  font-family: 'Syne', sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+}
+
+h1 {
+  font-weight: 750;
+  color: $morado;
+  transition: font-weight ease-in-out 1s;
+  font-size: 60px;
+  cursor: default;
+}
+
+h1:hover {
+  font-weight: 765;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: $negro;
+  font-size: 22px;
+}
+
+.morado-sel {
+  font-family: 'Syne', sans-serif;
+  color: $morado;
+  font-weight: 720;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+
+  .sel {
+    cursor: pointer;
+  }
+
+  .sel:hover{
+    text-decoration: underline;
+  }
+}
+
+.subheading {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.leyenda {
+  margin-top: 30px;
+  p {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    padding-left: 35px;
+    position: relative;
+    line-height: 22px;
+
+  }
+
+  p::after {
+    content: "";
+    height: 22px;
+    width: 22px;
+    border-radius: 11px;
+    position: absolute;
+    top: calc(50%-11px);
+    left: 0;
+    opacity: 0.5;
+  }
+
+  .salida::after {
+    background-color: $rosa;
+  }
+
+  .llegada::after {
+    background-color: $morado;
+  }
+}
+
+.syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.negro {
+  color: $negro;
+}
+
+//dropdwon
+.dropdown {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+
+  .btn-primary {
+    border: solid 1px $morado;
+    padding: 5px 20px;
+    background-color: $cafe-fondo;
+    color: $morado;
+    border-radius: 0;
+    font-weight: 700;
+    
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      background-color: $cafe-fondo;
+    }
+  }
+
+  .dropdown-toggle:after {
+    vertical-align: middle;
+  }
+
+  a.dropdown-item {
+    font-weight: 700;
+  }
+
+  .dropdown-menu {
+    padding: 5px 0;
+    font-size: 18px;
+    color: $morado;
+    background-color: $cafe-fondo;
+    border: 1px solid $morado;
+    max-height: 600px;
+    overflow-y: scroll;
+    font-weight: 700;
+
+    .dropdown-item {
+      padding: 3px 8px;
+      color: $morado;
+
+      &:active {
+        background-color: white;
+      }
+    }
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+  color: $morado;
+  background-color: $cafe-fondo;
+  border-color: $morado
+}
+
+/* TOLTIPS */
+
+#tooltip-mpio {
+  position: fixed;
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  padding: 5px;
+  overflow-wrap: anywhere;
+  background-color: white;
+  pointer-events: none;
+  font-family: 'Syne', sans-serif;
+  
+  border: 1.5px $morado solid;
+}
+
+
+#tooltip-mpio.hidden {
+  display: none;
+}
+
+#tooltip-mpio p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: $morado;
+  font-family: 'Syne', sans-serif;
+  font-weight: 690;
+
+  strong {
+    font-weight: 710;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $morado;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $morado;
+}
+
+
+
+/* SVG STYLES */
+.ruta {
+  stroke: $morado;
+  stroke-width: 2px;
+  fill: none
+}
+.dept {
+  stroke: $cafe-fondo;
+  stroke-width: 2px;
+  fill: white;
+}
+
+.circle-mpio {
+  stroke-width: 1px;
+  stroke-opacity: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &.llegada {
+    stroke: $morado;
+    fill: $morado;
+    fill-opacity: 0.3;
+  }
+
+  &.salida {
+    stroke: $rosa;
+    fill: $rosa;
+    fill-opacity: 0.4;
+  }
+
+  &:hover {
+    stroke-width: 1.5px;
+    fill-opacity: 0.5;
+  }
+}
+
+//alternativa línea
+.line-mpio {
+  stroke-width: 1px;
+  stroke-opacity: 1;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &.llegada {
+    stroke: $morado;
+    fill: $morado;
+    fill-opacity: 0.3;
+  }
+
+  &.salida {
+    stroke: $rosa;
+    fill: $rosa;
+    fill-opacity: 0.4;
+  }
+
+  &:hover {
+    stroke-width: 1.5px;
+    fill-opacity: 0.5;
+  }
+}
+

@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+
+$morado: #3745FE;
+$claro: #eaf0ff;
+$amarillo: #FFCA80;
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  background-color: $morado;
+  color: white;
+}
+
+.btm {
+  margin-bottom: 5vh;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    color: $amarillo;
+    text-decoration: none;
+  }
+}
+
+h1 {
+ padding-left: 20px;
+ padding-right: 20px;
+ color: white;
+ margin-top: 5vh;
+ margin-bottom: 5vh;
+
+  &.sub {
+    margin-bottom: 2vh;
+  }
+}
+
+.amarillo {
+  color: $amarillo;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #B8CCFF;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+.bar, .circle {
+  cursor: pointer;
+}
+
+.bar:hover {
+  fill: $amarillo;
+}
+
+.circle:hover {
+  fill:$amarillo;
+}
+
+.count {
+  fill: $morado;
+}
+
+.yAxis .domain {
+  display:none
+}
+
+.yAxis line {
+  display:none
+}
+
+.yAxis text {
+  fill: $claro;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 11px;
+}
+
+.countLabel {
+  font-size: 7px;
+  fill: $claro;
+  font-weight: 300;
+}
+
+#tooltip-bar,  #tooltip-bubble, #tooltip-grafo {
+  position: fixed;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  padding: 4px;
+  overflow-wrap: anywhere;
+  background-color: white;
+  pointer-events: none;
+}
+
+#tooltip-bubble {
+  border: 1px $morado solid;
+  max-width: 180px;
+}
+
+#tooltip-bar.hidden ,  #tooltip-bubble.hidden, #tooltip-grafo.hidden{
+  display: none;
+}
+
+#tooltip-bar p, #tooltip-bubble p , #tooltip-grafo p{
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.2;
+  color: $morado
+}
+
+.lista {
+  max-height: 700px;
+  overflow-y: scroll;
+  font-family: 'Source Sans Pro', sans-serif;
+
+  label {
+    font-size: 12px;
+    color: $claro;
+    cursor: pointer;
+  }
+
+  .form-check {
+    cursor: pointer;
+  }
+
+  .sel {
+    font-weight: 700;
+    color: white;
+
+    .checkmark {
+      height: 11px;
+      width: 11px;
+    }
+  }
+
+  .no-sel {
+    opacity: 0.8;
+    
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: calc(50% - 5px);
+    left: 0;
+    height: 10px;
+    width: 10px;
+    background-color: #eee;
+    border-radius: 100%;
+  }
+
+  .form-check:hover {
+    .checkmark {
+      height: 11px;
+      width: 11px;
+    }
+  }
+  
+}
+
+.description {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+
+  p {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+  
+  .dropdown {
+    font-family: 'Source Sans Pro', sans-serif;
+
+    .btn-primary {
+      border: solid 1px #b8ccff;
+      padding: 0 8px;
+      background-color: $morado;
+      color: $claro;
+      border-radius: 0;
+      
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    .dropdown-toggle:after {
+      vertical-align: middle;
+    }
+
+    .dropdown-menu {
+      padding: 5px 0;
+      font-size: 12px;
+      color: $morado;
+      background-color: #fff;
+      border: 1px solid $morado;
+      max-height: 600px;
+      overflow-y: scroll;
+
+      .dropdown-item {
+        padding: 3px 8px;
+        color: $morado;
+
+        &:active {
+          background-color: $claro;
+        }
+      }
+    }
+  }
+}
+
+.link {
+  stroke: lightgray;
+  opacity: 0.2;
+  stroke-width: 0.2;
+
+  &.hidden {
+    stroke-width: 0;
+  }
+
+  &.focus {
+    stroke-width: 0.7;
+    stroke: white
+  }
+}
+
+.node {
+  opacity: 1;
+  stroke-width: 0;
+  cursor: pointer;
+
+  &.hidden {
+    opacity: 0.1;
+    stroke-width: 0;
+  }
+
+  &.selected {
+    stroke-width: 1;
+    stroke: white;
+  }
+}
+
+.label {
+  font-size: 10px;
+  fill: $claro;
+  text-anchor: middle;
+}
+
+.padding {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 3em
+}
+
+.t-leg {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  fill: $claro;
+}
+
+ul {
+  font-size: 14px;
+  color: $claro;
+  font-weight: lighter;
+  font-family: 'Source Sans Pro';
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $morado;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $claro;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $claro;
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1200px;
+  }
+}

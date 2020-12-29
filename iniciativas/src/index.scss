@@ -1,0 +1,452 @@
+$azul-fondo: #FAFCFF;
+$azul-claro: #EDF0F6;
+$azul-oscuro: #2B3540;
+$cafe-claro: #D7C681;
+$cafe-oscuro: #A58A17;
+$gris: #BEBEBE;
+
+* {
+  box-sizing: border-box;
+}
+
+@media (min-width: 1200px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+      max-width: 1640px;
+  }
+}
+
+svg {
+  margin-top: 1em;
+}
+
+.leyenda {
+  max-width: 900px;
+  margin: auto;
+}
+
+
+
+h1 {
+  @media (max-width: 700px) {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  margin: auto;
+  max-width: 1600px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $azul-fondo;
+  font-family: 'Noto Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 700px) {
+    line-height: 1.3;
+  }
+}
+
+.donutArc {
+  fill:$azul-oscuro;
+  stroke: $azul-claro;
+}
+
+.arc-text {
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 10px;
+  fill: $azul-claro;
+  text-anchor: middle;
+  text-transform: uppercase;
+
+  @media (max-width: 700px) {
+    font-size: 9px;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 8px;
+  }
+}
+
+.hiddenDonutArcs {
+  fill: none;
+}
+
+.yearLine{
+  stroke: $gris;
+}
+
+.yearName {
+  fill: $gris;
+  text-anchor: middle;
+  font-size: 11px;
+  cursor: pointer;
+
+  @media (max-width: 700px) {
+    font-size: 8px;
+  }
+
+  &:hover {
+    font-size: 14px;
+    fill: $azul-oscuro;
+  }
+}
+
+
+
+.bar {
+  transition: fill 0.1s linear;
+  fill: $azul-oscuro;
+  cursor:pointer;
+}
+
+.bar:hover {
+  fill: $cafe-claro;
+}
+
+.area {
+  fill: $cafe-claro;
+  stroke: $cafe-oscuro;
+  fill-opacity: 0.6;
+  pointer-events: none;
+}
+
+.dept {
+  stroke-width: 0.5;
+  stroke: $azul-oscuro;
+  fill: $azul-claro;
+}
+
+.circle {
+  fill: $cafe-claro;
+  stroke-width: 1;
+  stroke: $cafe-oscuro;
+  fill-opacity: 0.6;
+  cursor: pointer;
+  transition: r 0.1s linear;
+}
+
+.circle-cat {
+  fill: $cafe-claro;
+  stroke-width: 1;
+  stroke: $cafe-oscuro;
+  fill-opacity: 0.6;
+  cursor: pointer;
+  transition: r 0.1s linear;
+}
+
+.label-cat,
+.label-val {
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 12px;
+  fill: $azul-oscuro;
+  text-anchor: middle;
+
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
+
+}
+
+.subtitle {
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
+}
+
+.label-val {
+  font-size: 11px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+tspan {
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 12px;
+  fill: $azul-oscuro;
+  text-anchor: middle;
+}
+
+#depto-tooltip{
+  position: fixed;
+  width: 150px;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+#depto-tooltip.hidden {
+  display: none;
+}
+
+#depto-tooltip p {
+  margin: 0;
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 12px;
+  color: $azul-oscuro;
+
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
+}
+
+#anio-tooltip{
+  position: fixed;
+  width: 200px;
+  height: auto;
+  padding: 5px;
+  background-color: white;
+
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+#anio-tooltip.hidden {
+  display: none;
+}
+
+#anio-tooltip p {
+  margin: 0;
+  font-family: 'Noto Sans' sans-serif;
+  font-size: 12px;
+  color: $azul-oscuro;
+
+  @media (max-width: 700px) {
+    font-size: 10px;
+  }
+}
+
+.data-panel {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+}
+
+.cont {
+  margin-top: 5vh;
+}
+
+.acc-header button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: $azul-oscuro;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: left;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
+
+  &:focus {
+    outline: none;
+    font-weight: 700;
+  }
+
+  &:hover {
+    color: $cafe-oscuro;
+  }
+
+  &:after {
+    background-image: url('./arrow.svg');
+    visibility: visible;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin-left: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: " ";
+  }
+}
+
+.leyenda {
+  margin-top: 2vh;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.leyenda-datos {
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  font-style: italic;
+  color: $azul-oscuro;
+  font-size: 10px;
+  text-align: center;
+}
+
+
+.radial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.acc-body {
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-bottom: 20px;
+
+  .acc-ubicacion {
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 5px;
+  }
+
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
+}
+
+.accordion {
+  margin-top: 20px;
+  max-height: 400px;
+  overflow-y: scroll;
+  padding-right: 10px;
+  
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $azul-claro;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $cafe-oscuro;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $cafe-oscuro;
+}
+
+.borrar {
+  color: #ac932c;
+  text-decoration: underline;
+  font-size: 15px;
+  cursor: pointer;
+
+  @media (max-width: 700px) {
+    font-size: 12px;
+  }
+}
+
+.instrucciones {
+  margin-top: 2vh;
+  color: $cafe-oscuro;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.tableau {
+  margin-top: 5em;
+  margin-bottom: 5vh;
+}
+
+.title-tableau {
+  text-align: center;
+  margin-bottom: 1em;
+
+}
+
+.tableauPlaceholder {
+  margin-left: auto;
+  margin-right: auto;
+  // overflow-y: scroll !important;
+  // overflow-x: hidden !important;
+}
+
+.title-container {
+  overflow: hidden;
+}
+
+.app-title {
+  margin-bottom: 5vh;
+  text-align: left;
+  max-width: 60%;
+  color: #000a8d;
+  font-weight: 600;
+  font-size: 2.7rem;
+  float: left;
+
+  @media (max-width: 1199px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 850px) {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 1.6rem;
+  }
+}
+
+.logo {
+  max-width: 500px;
+  float: right;
+  margin-bottom: 20px;
+
+  @media (max-width: 1299px) {
+    display: block;
+    margin: auto;
+    float: none;
+  }
+
+  @media (max-width: 850px) {
+    max-width: 80%;
+  }
+}
+
+#tooltip-bubble.hidden {
+  display: none;
+}
+
+#tooltip-bubble p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#tooltip-bubble {
+  position: fixed;
+  width: auto;
+  max-width: 250px;
+  height: auto;
+  padding: 5px;
+  overflow-wrap: anywhere;
+  background-color: $azul-fondo;
+  pointer-events: none;
+  color: $azul-oscuro;
+  border: $azul-oscuro solid 1px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');

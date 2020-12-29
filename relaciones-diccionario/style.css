@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    max-width: 1000px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #EDEDED;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+h1 {
+    text-align: left;
+    font-size: 40px;
+    margin: auto;
+    -webkit-text-stroke: 1.5px #101DC4;
+    color: #FB8279;
+    margin-top: 1em;
+}
+
+
+#container {
+    width: 100%;
+    height: 1200px;
+    margin-top: 2em;
+}
+
+/* svg selections */
+rect {
+    fill: #EDEDED;
+    stroke: #101DC4;
+    stroke-width: 1.5px;
+    cursor: pointer;
+    transition: fill .3s ease;
+}
+
+.active.pink {
+    fill: #FB8279;
+    stroke: #101DC4;
+}
+
+.active.yellow {
+    fill: #FAF636;
+    stroke: #101DC4;
+}
+
+.active.green {
+    fill: #65FC4D;
+    stroke: #101DC4;
+}
+
+.line.activelink {
+    fill: none;
+    stroke: #101DC4;
+    stroke-width: 1.5px;
+}
+
+.label {
+    fill: #101DC4;
+    pointer-events: none;
+    font-size: 12;
+    stroke-width: 0;
+}
+.line {
+    fill: none;
+    stroke: #CCC;
+    stroke-width: 1.5px;
+}
+
+.title {
+    stroke: #101DC4;
+    stroke-width: 1.2px;
+    font-size: 30;
+    font-weight: bold;
+    text-anchor: middle;
+}
+
+.title.tesauro {
+    fill: #FAF636;
+}
+
+.title.ruv{
+    fill: #FB8279;
+}
+
+.title.cnmh{
+    fill: #65FC4D;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: #A33F38;
+}
+
+.botones-container {
+  margin-top: 20px;
+}
+
+#des {
+  padding: 0;
+  color: white;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.title {
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+button {
+  background: #A33F38;
+  border: 2px solid white;
+  color: white;
+  box-shadow: none;
+  margin-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  width: 100%;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background: #F2F2F2 !important;
+  color:  #A33F38 !important;
+  border: 2px solid white;
+}
+
+/* svg */
+.yAxis path.domain {
+  stroke: none;
+}
+
+.xAxis path.domain {
+  stroke: #F2F2F2;
+}
+
+.yAxis line {
+  opacity: 0.5;
+  stroke-width: 0.5;
+}
+
+.tick line {
+  stroke: #F2F2F2;
+}
+
+.axis-label {
+  font-size: 11px;
+}
+
+rect {
+  cursor: pointer;
+}
+
+text {
+  font-family: 'Roboto', sans-serif;
+  fill: #F2F2F2;
+  font-size: 8px;
+  font-weight: 300;
+}
+
+.grafica {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+ .slick-slide {
+  height: fit-content !important;
+} 
+

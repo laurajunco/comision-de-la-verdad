@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background-color: #F5AF4D;
+}
+
+.botones-container {
+  margin-top: 20px;
+}
+
+button {
+  background: #A33F38;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 8px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  color: white;
+  margin-top: 15px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background: #F2F2F2 !important;
+  color:  #A33F38 !important;
+  border: none;
+}
+
+#next {
+  float: right;
+}
+
+#des {
+  color: #000;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 200px;
+  margin-top: 0
+}
+
+
+/* --------- svg ---------- */
+.yAxis path.domain {
+  stroke: none;
+}
+
+.xAxis path.domain {
+  stroke: #F2F2F2;
+}
+
+.yAxis line {
+  stroke-width: 0.8;
+}
+
+.tick line {
+  stroke:  #F2F2F2;
+}
+
+.axis-label {
+  font-size: 11px;
+}
+
+.area {
+  cursor: pointer;
+}
+
+text {
+  font-family: 'Roboto', sans-serif;
+  fill: #F2F2F2;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.yearLine {
+  stroke: #000;
+  stroke-width: 0.8px;
+}
+
+.yearLabel {
+  fill: #000;
+  text-anchor: middle;
+}

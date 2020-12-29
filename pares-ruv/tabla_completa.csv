@@ -1,0 +1,17 @@
+nombres_hechos,Abandono o despojo forzado de tierras,"Acto terrorista, atentados, combates, enfrentamientos y hostigamientos",Amenaza,Confinamiento,Desaparición forzada,Desplazamiento forzado,Homicidio,Lesiones personales físicas,Lesiones personales psicológicas,"Minas antipersonal, munición sin explotar y artefacto explosivo improvisado","Vinculación de niños, niñas y adolescentes a actividades relacionadas con grupos armados",Pérdida de bienes muebles o inmuebles,Secuestro,Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado,Sin información,Tortura
+Abandono o despojo forzado de tierras,1042,406,1857,18,1090,59280,5383,56,129,37,37,1133,302,201,267,83
+"Acto terrorista, atentados, combates, enfrentamientos y hostigamientos",406,21980,24523,675,2113,120634,23606,9505,3268,2518,232,47449,3197,4063,167,1527
+Amenaza,1857,24523,24661,2470,13714,1069390,74048,2955,1518,818,1331,51487,10247,18083,709,6565
+Confinamiento,18,675,2470,19080,112,50630,481,30,21,16,56,1342,18,57,0,43
+Desaparición forzada,1090,2113,13714,112,104926,160677,46557,289,824,256,580,4431,17529,1572,2989,668
+Desplazamiento forzado,59280,120634,1069390,50630,160677,7887498,765184,12801,20528,8301,7209,187674,35676,64819,16373,16189
+Homicidio,5383,23606,74048,481,46557,765184,808584,1614,4574,3274,935,20939,6662,5257,14443,4508
+Lesiones personales físicas,56,9505,2955,30,289,12801,1614,493,1606,4636,91,942,640,3426,38,948
+Lesiones personales psicológicas,129,3268,1518,21,824,20528,4574,1606,5594,1726,129,1495,551,463,178,417
+"Minas antipersonal, munición sin explotar y artefacto explosivo improvisado",37,2518,818,16,256,8301,3274,4636,1726,5782,16,856,179,24,22,73
+"Vinculación de niños, niñas y adolescentes a actividades relacionadas con grupos armados",37,232,1331,56,580,7209,935,91,129,16,0,78,818,788,60,162
+Pérdida de bienes muebles o inmuebles,1133,47449,51487,1342,4431,187674,20939,942,1495,856,78,34704,2929,1972,368,1156
+Secuestro,302,3197,10247,18,17529,35676,6662,640,551,179,818,2929,14167,3806,391,4655
+Delitos contra la libertad y la integridad sexual en desarrollo del conflicto armado,201,4063,18083,57,1572,64819,5257,3426,463,24,788,1972,3806,3333,168,3921
+Sin información,267,167,709,0,2989,16373,14443,38,178,22,60,368,391,168,2917,86
+Tortura,83,1527,6565,43,668,16189,4508,948,417,73,162,1156,4655,3921,86,2212
